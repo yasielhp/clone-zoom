@@ -107,18 +107,14 @@ const MeetingTypeList = () => {
           handleClick={createMeeting}
         >
           <div className='flex flex-col gap-2.5'>
-            <label className='text-sky-2 text-base font-normal leading-[22.4px]'>
-              Add a description
-            </label>
+            <label className='text-sky-2 text-base font-normal leading-[22.4px]'>Add a description</label>
             <Textarea
-              className='bg-dark-3 border-none focus-visible:ring-0 focus-visible:ring-offset-0'
+              className='border-none bg-dark-3 focus-visible:ring-0 focus-visible:ring-offset-0'
               onChange={(e) => setValues({ ...values, description: e.target.value })}
             />
           </div>
           <div className='flex w-full flex-col gap-2.5'>
-            <label className='text-sky-2 text-base font-normal leading-[22.4px]'>
-              Select Date and Time
-            </label>
+            <label className='text-sky-2 text-base font-normal leading-[22.4px]'>Select Date and Time</label>
             <ReactDatePicker
               selected={values.dateTime}
               onChange={(date) => setValues({ ...values, dateTime: date! })}
@@ -127,7 +123,7 @@ const MeetingTypeList = () => {
               timeIntervals={15}
               timeCaption='time'
               dateFormat='MMMM d, yyyy h:mm aa'
-              className='bg-dark-3 w-full rounded p-2 focus:outline-none'
+              className='w-full rounded bg-dark-3 p-2 focus:outline-none'
             />
           </div>
         </MeetingModal>
@@ -158,7 +154,7 @@ const MeetingTypeList = () => {
         <Input
           placeholder='Meeting link'
           onChange={(e) => setValues({ ...values, link: e.target.value })}
-          className='bg-dark-3 border-none focus-visible:ring-0 focus-visible:ring-offset-0'
+          className='border-none bg-dark-3 focus-visible:ring-0 focus-visible:ring-offset-0'
         />
       </MeetingModal>
 
