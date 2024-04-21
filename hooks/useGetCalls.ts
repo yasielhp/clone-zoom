@@ -1,6 +1,7 @@
-import { useUser } from '@clerk/nextjs'
 import { useStreamVideoClient, type Call } from '@stream-io/video-react-sdk'
 import { useEffect, useState } from 'react'
+
+import { useUser } from '@clerk/nextjs'
 
 export const useGetCalls = () => {
   const [calls, setCalls] = useState<Call[]>([])

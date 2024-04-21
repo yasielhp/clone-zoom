@@ -1,12 +1,13 @@
 'use client'
 
 import { Call, CallRecording } from '@stream-io/video-react-sdk'
+import { useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
+
+import { useGetCalls } from '@/hooks/useGetCalls'
 
 import Loader from './Loader'
-import { useGetCalls } from '@/hooks/useGetCalls'
 import MeetingCard from './MeetingCard'
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { useToast } from './ui/use-toast'
 
 const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
@@ -56,7 +57,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
     }
 
     if (type === 'recordings') fetchRecordings()
-  }, [type, callRecordings])
+  }, [type, toast, callRecordings])
 
   if (isLoading) return <Loader />
 

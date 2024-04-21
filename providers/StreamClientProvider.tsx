@@ -1,10 +1,12 @@
 'use client'
-import { useEffect, useState, type ReactNode } from 'react'
 import { StreamVideo, StreamVideoClient } from '@stream-io/video-react-sdk'
+import { useEffect, useState, type ReactNode } from 'react'
+
 import { useUser } from '@clerk/nextjs'
 
-import { tokenProvider } from '@/actions/stream.actions'
 import Loader from '@/components/Loader'
+
+import { tokenProvider } from '@/actions/stream.actions'
 
 const API_KEY = process.env.NEXT_PUBLIC_STREAM_API_KEY
 

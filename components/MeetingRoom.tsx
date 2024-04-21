@@ -1,5 +1,4 @@
 'use client'
-import { cn } from '@/lib/utils'
 import {
   CallControls,
   CallParticipantsList,
@@ -9,6 +8,8 @@ import {
   useCallStateHooks,
   CallingState,
 } from '@stream-io/video-react-sdk'
+import { LayoutList, Users } from 'lucide-react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import React, { useState } from 'react'
 
 import {
@@ -18,8 +19,9 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { LayoutList, Users } from 'lucide-react'
-import { useRouter, useSearchParams } from 'next/navigation'
+
+import { cn } from '@/lib/utils'
+
 import EndCallButton from './EndCallButton'
 import Loader from './Loader'
 

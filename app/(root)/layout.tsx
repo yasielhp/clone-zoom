@@ -1,4 +1,5 @@
 import { type ReactNode } from 'react'
+
 import StreamVideoProvider from '@/providers/StreamClientProvider'
 
 export default function RootLayout({ children }: { children: ReactNode }) {
